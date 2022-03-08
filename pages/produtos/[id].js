@@ -1,15 +1,3 @@
-//BUSCANDO INFORMAÇÕES O SERVER
-
-export async function getServerSideProps(context) {
-  const id = context.query.id;
-
-  return {
-    props: {
-      id: id,
-    },
-  };
-}
-
 // GERANDO PAGINAS ESTÁTICAS PREVIAMENTE E DINAMICAMENTE
 
 // export async function getStaticPaths() {
@@ -40,6 +28,17 @@ export async function getServerSideProps(context) {
 //   };
 // }
 
+//BUSCANDO INFORMAÇÕES O SERVER
+
+export async function getServerSideProps(context) {
+  const id = context.query.id;
+
+  return {
+    props: {
+      id: id,
+    },
+  };
+}
 export default function Produtos(props) {
   return <div>Id do produto {props.id}</div>;
 }
